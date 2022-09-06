@@ -244,15 +244,16 @@ def stats(update, context):
 def start(update, context):
     buttons = ButtonMaker()
     if EMOJI_THEME is True:
-        buttons.buildbutton(f"😎 {START_BTN1_NAME}", f"{START_BTN1_URL}")
-        buttons.buildbutton(f"🔥 {START_BTN2_NAME}", f"{START_BTN2_URL}")
+        buttons.buildbutton(f"😎 {START_BTN1_NAME} 😎", f"{START_BTN1_URL}")
+        buttons.buildbutton(f"🚀 {START_BTN2_NAME} 🚀", f"{START_BTN2_URL}")
+        buttons.buildbutton(f"🍿 {START_BTN3_NAME} 🍿", f"{START_BTN3_URL}")
     else:
         buttons.buildbutton(f"{START_BTN1_NAME}", f"{START_BTN1_URL}")
         buttons.buildbutton(f"{START_BTN2_NAME}", f"{START_BTN2_URL}")
+        buttons.buildbutton(f"{START_BTN3_NAME}", f"{START_BTN3_URL}")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
-        start_string = f'''This bot can mirror all your links to Google Drive!
-Type /{BotCommands.HelpCommand} to get a list of available commands
+        start_string = f'''💌 <b>ʜɪ {message.from_user.mention}</b> , \n\n<b>ɪ ᴀᴍ <a href=https://t.me/mkvxleech_bot>⚡ ᴍᴋᴠ 𝗫 ʟᴇᴇᴄʜ ⚡</a></b> <b>ɪ ᴀᴍ ᴘᴏᴡᴇʀғᴜʟʟ ᴍɪʀʀᴏʀ & ʟᴇᴇᴄʜ ʙᴏᴛ</b>\n\n<b>ɴᴏᴛᴇ :<b> <c>All The Uploaded Links And Files Will Be Sent Here In Your Private Chat</c>\n\n<b>● ᴀʟʟ ᴄʀᴇᴅɪᴛs :</b> <a href=https://t.me/mkvxleech_bot>⚡ ᴍᴋᴠ 𝗫 ʟᴇᴇᴄʜ ⚡</a></b>
 '''
         if PICS:
             sendPhoto(start_string, context.bot, update.message, random.choice(PICS), reply_markup)
