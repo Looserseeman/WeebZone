@@ -329,8 +329,7 @@ def log(update, context):
 
 
 help_string = '''
-<b><a href='https://github.com/codewithweeb/mirror-with-weeb'>WeebZone</a></b> - The Ultimate Telegram MIrror-Leech Bot to Upload Your File & Link in Google Drive & Telegram
-Choose a help category:
+<b>ɪ ᴀᴍ <a href='https://t.me/mkvxleech_bot'>⚡ ᴍᴋᴠ 𝗫 ʟᴇᴇᴄʜ ⚡</a></b> <b>ɴᴏᴛʜɪɴɢ ᴛᴏ sᴀʏ ᴀʙᴏᴜᴛ ᴍᴇ , ɪ ᴀᴍ ᴊᴜsᴛ ᴀ ʟᴇᴇᴄʜ ʙᴏᴛ ᴍᴀᴅᴇ ʙʏ ᴍʏ ᴅᴇᴠᴇʟᴏᴘᴇʀs ᴀɴᴅ ᴍʏ ᴀᴅᴍɪɴs </b>
 '''
 
 help_string_telegraph_user = f'''
