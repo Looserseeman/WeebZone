@@ -251,7 +251,13 @@ def start(update, context):
         buttons.buildbutton(f"{START_BTN2_NAME}", f"{START_BTN2_URL}")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
-        start_string = f'''💌 <b>ʜɪ</b> , \n\n<b>ɪ ᴀᴍ <a href=https://t.me/mkvxleech_bot>⚡ ᴍᴋᴠ 𝗫 ʟᴇᴇᴄʜ ⚡</a></b> <b>ɪ ᴀᴍ ᴘᴏᴡᴇʀғᴜʟʟ ᴍɪʀʀᴏʀ & ʟᴇᴇᴄʜ ʙᴏᴛ</b>\n\n<b>ɴᴏᴛᴇ :</b> <c>All The Uploaded Links And Files Will Be Sent Here In Your Private Chat</c>\n\n<b>● ᴀʟʟ ᴄʀᴇᴅɪᴛs :</b> <b><a href=https://t.me/mkvxleech_bot>⚡ ᴍᴋᴠ 𝗫 ʟᴇᴇᴄʜ ⚡</a></b>
+        start_string = f'''💌 <b>ʜɪ</b> , 
+
+<b>ɪ ᴀᴍ <a href=https://t.me/mkvxleech_bot>⚡ ᴍᴋᴠ 𝗫 ʟᴇᴇᴄʜ ⚡</a></b> <b>ɪ ᴀᴍ ᴘᴏᴡᴇʀғᴜʟʟ ᴍɪʀʀᴏʀ & ʟᴇᴇᴄʜ ʙᴏᴛ</b>
+
+<b>ɴᴏᴛᴇ :</b> <c>All The Uploaded Links And Files Will Be Sent Here In Your Private Chat</c>
+
+<b>● ᴀʟʟ ᴄʀᴇᴅɪᴛs :</b> <b><a href=https://t.me/mkvxleech_bot>⚡ ᴍᴋᴠ 𝗫 ʟᴇᴇᴄʜ ⚡</a></b>
 '''
         if PICS:
             sendPhoto(start_string, context.bot, update.message, random.choice(PICS), reply_markup)
