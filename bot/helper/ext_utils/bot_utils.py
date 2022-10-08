@@ -30,16 +30,16 @@ PAGE_NO = 1
 
 class MirrorStatus:
     if EMOJI_THEME is True:
-        STATUS_UPLOADING = "📤 🆄🅿🅻🅾🅰🅳🅸🅽🅶 "
-        STATUS_DOWNLOADING = "📥 🅳🅾🆆🅽🅻🅾🅰🅳🅸🅽🅶 "
-        STATUS_CLONING = "♻️ 🅲🅻🅾🅽🅴 "
-        STATUS_WAITING = "💤 🆀🆄🅴🆄🅴 "
-        STATUS_PAUSED = "⛔️ 🅿🅰🆄🆂🅴🅳 "
-        STATUS_ARCHIVING = "🔐 🅰🆁🅲🅷🅸🆅🅴 "
-        STATUS_EXTRACTING = "📂 🅴🆇🆃🆁🅰🅲🆃🅸🅽🅶 "
-        STATUS_SPLITTING = "✂️ 🆂🅿🅻🅸🆃🆃🅸🅽🅶 "
-        STATUS_CHECKING = "📝 🅲🅷🅴🅲🅺-🆄🅿 "
-        STATUS_SEEDING = "🌧 🆂🅴🅴🅳 "
+        STATUS_UPLOADING = "📤 𝙐𝙋𝙇𝙊𝘼𝘿𝙄𝙉𝙂 "
+        STATUS_DOWNLOADING = "📥 𝘿𝙊𝙒𝙉𝙇𝙊𝘼𝘿𝙄𝙉𝙂 "
+        STATUS_CLONING = "♻️ 𝘾𝙇𝙊𝙉𝙀 "
+        STATUS_WAITING = "💤 𝙌𝙐𝙀𝙐𝙀 "
+        STATUS_PAUSED = "⛔️ 𝙋𝘼𝙐𝙎𝙀𝘿 "
+        STATUS_ARCHIVING = "🔐 𝘼𝙍𝘾𝙃𝙄𝙑𝙀 "
+        STATUS_EXTRACTING = "📂 𝙀𝙓𝙏𝙍𝘼𝘾𝙏𝙄𝙉𝙂 "
+        STATUS_SPLITTING = "✂️ 𝙎𝙋𝙇𝙄𝙏𝙏𝙄𝙉𝙂 "
+        STATUS_CHECKING = "📝 𝘾𝙃𝙀𝘾𝙆 𝙐𝙋 "
+        STATUS_SEEDING = "🌧 𝙎𝙀𝙀𝘿 "
     else:
         STATUS_UPLOADING = "Upload"
         STATUS_DOWNLOADING = "Download"
@@ -169,7 +169,7 @@ def get_readable_message():
             if download.status() not in [MirrorStatus.STATUS_SEEDING, MirrorStatus.STATUS_SPLITTING]:
                 if EMOJI_THEME is True:
                     msg += f"\n<b>├</b>{get_progress_bar_string(download)} {download.progress()}"
-                    msg += f"\n\n<b>├🔄 𝗣𝗥𝗢𝗖𝗘𝗦𝗦 :</b> {get_readable_file_size(download.processed_bytes())} of {download.size()}"
+                    msg += f"\n<b>├🔄 𝗣𝗥𝗢𝗖𝗘𝗦𝗦 :</b> {get_readable_file_size(download.processed_bytes())} of {download.size()}"
                     msg += f"\n<b>├⚡ 𝗦𝗣𝗘𝗘𝗗:</b> {download.speed()}"
                     msg += f"\n<b>├⏳ 𝗘𝗧𝗔 :</b> {download.eta()}"
                     msg += f"\n<b>├🍭 𝗘𝗟𝗔𝗣𝗦𝗘𝗗 : </b>{get_readable_time(time() - download.message.date.timestamp())}"
